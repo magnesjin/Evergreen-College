@@ -1,0 +1,36 @@
+/* Admission-specific styles */
+.steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.step-card { padding:28px; display:flex; flex-direction:column; gap:12px; position:relative; }
+.step-num { font-family:var(--font-heading); font-size:2.5rem; font-weight:900; color:var(--accent); opacity:0.3; line-height:1; }
+.step-title { font-weight:700; color:#fff; font-size:1.05rem; margin-top:-8px; }
+.step-desc { font-size:0.875rem; color:rgba(255,255,255,0.6); line-height:1.7; }
+
+.deadlines-list { display:flex; flex-direction:column; gap:16px; }
+.deadline-row { display:flex; align-items:center; gap:20px; padding:24px 28px; flex-wrap:wrap; }
+.deadline-info { flex:1; }
+.deadline-round { font-weight:700; color:#fff; font-size:1rem; }
+.deadline-note { font-size:0.8rem; color:rgba(255,255,255,0.5); margin-top:4px; }
+.deadline-date { font-family:var(--font-heading); font-weight:700; color:var(--accent); font-size:1.1rem; }
+.badge-open { background:rgba(34,197,94,0.15); color:#4ade80; border:1px solid rgba(34,197,94,0.3); }
+.badge-upcoming { background:rgba(251,191,36,0.15); color:#fbbf24; border:1px solid rgba(251,191,36,0.3); }
+
+.fees-table { overflow:hidden; }
+.fees-table__head { display:grid; grid-template-columns:2fr 1fr 1fr 1.2fr; padding:16px 24px; background:rgba(26,35,126,0.4); font-size:0.8rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); gap:12px; }
+.fees-table__row { display:grid; grid-template-columns:2fr 1fr 1fr 1.2fr; padding:16px 24px; border-top:1px solid rgba(255,255,255,0.06); gap:12px; font-size:0.9rem; color:rgba(255,255,255,0.75); transition:var(--transition); }
+.fees-table__row:hover { background:rgba(255,255,255,0.03); }
+.fees-program { font-weight:600; color:#fff; }
+.fees-total { font-weight:700; color:var(--accent); }
+
+.scholarship-card { display:flex; gap:20px; padding:28px; align-items:flex-start; }
+.scholarship-name { font-weight:700; color:#fff; font-size:1rem; margin-bottom:6px; }
+.scholarship-value { font-family:var(--font-heading); font-size:1.2rem; font-weight:700; margin-bottom:6px; display:block; }
+.scholarship-criteria { font-size:0.85rem; color:rgba(255,255,255,0.55); }
+
+.download-box { display:grid; grid-template-columns:auto 1fr auto; gap:40px; padding:48px; align-items:start; }
+.download-box__icon { font-size:4rem; }
+.download-box__checklist { list-style:none; margin-top:16px; display:flex; flex-direction:column; gap:8px; }
+.download-box__checklist li { display:flex; align-items:center; gap:10px; font-size:0.9rem; color:rgba(255,255,255,0.7); }
+.download-box__actions { display:flex; flex-direction:column; gap:12px; min-width:200px; }
+
+@media(max-width:900px){ .steps-grid{grid-template-columns:repeat(2,1fr)} .download-box{grid-template-columns:1fr;text-align:center} .download-box__icon{margin:0 auto} .download-box__checklist{align-items:flex-start} }
+@media(max-width:600px){ .steps-grid{grid-template-columns:1fr} .fees-table__head,.fees-table__row{grid-template-columns:1fr 1fr} .fees-table__head span:nth-child(3),.fees-table__row span:nth-child(3){display:none} }

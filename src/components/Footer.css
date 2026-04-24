@@ -1,0 +1,139 @@
+.footer { background: var(--dark-card); border-top: 1px solid var(--border); }
+
+.footer__top { padding: 72px 0 48px; }
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+  gap: 48px;
+}
+
+/* Brand */
+.footer__brand {}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.footer__logo-icon {
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  background: var(--gradient-accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--primary-dark);
+  flex-shrink: 0;
+}
+.footer__logo-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.footer__logo-tagline {
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+.footer__desc {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.footer__socials { display: flex; gap: 10px; }
+.footer__social {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.6);
+  transition: var(--transition);
+}
+.footer__social:hover { background: var(--accent); border-color: var(--accent); color: var(--primary-dark); transform: translateY(-3px); }
+
+/* Columns */
+.footer__col {}
+.footer__col-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+.footer__links { display: flex; flex-direction: column; gap: 10px; }
+.footer__link {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer__link::before { content: '›'; color: var(--accent); font-size: 1rem; opacity: 0; transition: var(--transition); }
+.footer__link:hover { color: var(--accent-light); padding-left: 8px; }
+.footer__link:hover::before { opacity: 1; }
+
+/* Contact */
+.footer__contact { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
+.footer__contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+}
+.footer__contact li svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.footer__contact li a { color: rgba(255,255,255,0.55); transition: var(--transition); }
+.footer__contact li a:hover { color: var(--accent-light); }
+
+/* Newsletter */
+.footer__newsletter h5 { font-size: 0.875rem; font-weight: 600; color: #fff; margin-bottom: 10px; }
+.footer__newsletter-form { display: flex; gap: 8px; }
+.footer__newsletter-form input {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  outline: none;
+  transition: var(--transition);
+}
+.footer__newsletter-form input::placeholder { color: rgba(255,255,255,0.3); }
+.footer__newsletter-form input:focus { border-color: var(--accent); }
+
+/* Bottom */
+.footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 20px 0;
+}
+.footer__bottom .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer__bottom p { font-size: 0.85rem; color: rgba(255,255,255,0.35); }
+.footer__bottom-links { display: flex; gap: 24px; }
+.footer__bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.35); transition: var(--transition); }
+.footer__bottom-links a:hover { color: var(--accent); }
+
+@media (max-width: 1024px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 600px) {
+  .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer__bottom .container { flex-direction: column; text-align: center; }
+  .footer__newsletter-form { flex-direction: column; }
+}

@@ -1,0 +1,42 @@
+/* Contact page styles */
+.contact-info-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+.contact-info-card { padding:32px 24px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:12px; }
+.contact-info-card h4 { font-weight:700; color:#fff; font-size:1rem; }
+.contact-info-card p { font-size:0.875rem; color:rgba(255,255,255,0.55); line-height:1.7; }
+
+.contact-main-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:56px; align-items:start; }
+
+.contact-form-wrap {}
+.contact-form { padding:36px; display:flex; flex-direction:column; gap:20px; }
+.contact-form__row { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.contact-form__field { display:flex; flex-direction:column; gap:8px; }
+.contact-form__field label { font-size:0.8rem; font-weight:600; color:rgba(255,255,255,0.6); letter-spacing:0.05em; }
+.contact-form__field input,
+.contact-form__field select,
+.contact-form__field textarea {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:var(--radius-sm);
+  padding:12px 16px;
+  color:#fff;
+  font-family:var(--font-body);
+  font-size:0.9rem;
+  outline:none;
+  transition:var(--transition);
+  resize:vertical;
+}
+.contact-form__field input::placeholder,
+.contact-form__field textarea::placeholder { color:rgba(255,255,255,0.25); }
+.contact-form__field input:focus,
+.contact-form__field select:focus,
+.contact-form__field textarea:focus { border-color:var(--accent); background:rgba(255,255,255,0.07); }
+.contact-form__field select { cursor:pointer; }
+.contact-form__field select option { background:#1a1c30; color:#fff; }
+
+.contact-success { padding:48px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:16px; }
+
+.dept-contact-card { display:flex; gap:16px; padding:20px 24px; align-items:flex-start; }
+
+@media(max-width:1024px){ .contact-info-grid{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:768px){ .contact-main-grid{grid-template-columns:1fr} .contact-form__row{grid-template-columns:1fr} }
+@media(max-width:480px){ .contact-info-grid{grid-template-columns:1fr 1fr} }
